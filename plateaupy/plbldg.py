@@ -45,6 +45,31 @@ extendedAttribute={}\n\
 attr={}'\
 		.format(self.id, self.usage, self.measuredHeight, self.storeysAboveGround, self.storeysBelowGround, \
 			self.address, self.buildingDetails, self.extendedAttribute, self.attr)
+	
+ 
+ 	# ysorimachi add function(23.7.24)
+	# get_building_information_all_properties
+	def getBuildingInformation(self):
+		return {
+			"BuildingId" : self.id,
+			"usage" : self.usage,
+			"measuredHeight" : self.measuredHeight,
+			"storeysAboveGround" : self.storeysAboveGround,
+			"storeysBelowGround" : self.storeysBelowGround,
+			"buildingDetails" : self.buildingDetails,
+			"extendedAttribute" : self.extendedAttribute,
+			"attr" : self.attr,
+			"buildingDetails" : self.address,
+   ##lod0
+			"lod0RoofEdge" : self.lod0RoofEdge,
+   ##lod1
+			"lod1Solid" : self.lod1Solid,
+   ##lod2
+			"lod2ground" : self.lod2ground,
+			"lod2roof" : self.lod2roof,
+			"lod2wall" : self.lod2wall,
+		}
+     
 	# get vertices, triangles from lod0RoofEdge
 	def getLOD0polygons(self, height=None):
 		vertices = None
