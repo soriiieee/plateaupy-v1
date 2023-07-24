@@ -1,0 +1,6 @@
+input/
+log/
+plateaupy/__pycache__/
+utils/__pycache__/
+plateaupy/thirdparty/earcutpython/earcut/__pycache__/
+cached/
