@@ -47,7 +47,9 @@ class pldem(plobj):
 						bit = False
 				if yidx < 3:
 					usebit.append(bit)
-				y[:] = convertPolarToCartsian(*y)
+     
+				y[:] = convertPolarToCartsian(*y) #緯度経度・標高から直交座標系の座標変換を行う
+    
 		# to vertices and triangles
 		#   integrate vertices that are coincident.
 		mesh = plmesh()
